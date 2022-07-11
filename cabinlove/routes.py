@@ -109,7 +109,7 @@ def profile(username):
         
     if "user" in session:
         return render_template("profile.html", username=session["user"])
-
+        
     return redirect(url_for("login"))
 
 

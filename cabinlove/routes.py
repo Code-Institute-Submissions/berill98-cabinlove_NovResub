@@ -1,4 +1,5 @@
-from flask import render_template, request, redirect, url_for
+from flask import flash, render_template, request, redirect, session, url_for
+from werkzeug.security import generate_password_hash, check_password_hash
 from cabinlove import app, db
 from cabinlove.models import Location, Cabin, User
 
@@ -109,4 +110,12 @@ def profile(username):
     if "user" in session:
         return render_template("profile.html", username=session["user"])
 
+    return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
     return redirect(url_for("login"))

@@ -44,3 +44,32 @@ def add_cabin():
         db.session.commit()
         return redirect(url_for("home"))
     return render_template("add_cabin.html", locations=locations)
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # check if username already exists in db
+        existing_user = User.query.filter(User.user_name == \
+                                           request.form.get("username").lower()).all()
+        
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+        
+        user = User(
+            user_name=request.form.get("username").lower(),
+            password=generate_password_hash(request.form.get("password"))
+        )
+        
+        db.session.add(user)
+        db.session.commit()
+
+        # put the new user into 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
+
+    return render_template("register.html")
+
+

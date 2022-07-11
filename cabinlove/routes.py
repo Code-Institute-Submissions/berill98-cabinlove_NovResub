@@ -5,4 +5,4 @@ from cabinlove.models import Location, Cabin, User
 
 @app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("cabins.html")

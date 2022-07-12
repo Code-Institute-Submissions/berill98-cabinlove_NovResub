@@ -29,4 +29,33 @@
 </div>
 {% endif %}
 
+<div class="row">
+    {% for cabin in cabins %}
+    <div class="col s12 m6 l3">
+        <div class="card light-blue darken-4 center-align">
+            <div class="card-content white-text">
+                <span class="card-title">Cabin ID: {{ cabin.cabin_id }}</span>
+                <span class="card-title">Cabin Name: {{ cabin.cabin_name }}</span>
+                <span class="card-title">Owner: {{ cabin.owner }}</span>
+                <span class="card-title">Location: {{ cabin.location }}</span>
+                <span class="card-title">Photo: {{ cabin.photo }}</span>
+                <img src="{{ cabin.photo }}" alt="{{ cabin.cabin_name }}" class="responsive-img"
+                    onError="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png';">
+                <span class="card-title">Description: {{ cabin.cabin_description }}</span>
+                <span class="card-title">Pet Friendly: {{ cabin.pet_friendly }}</span>
+                <span class="card-title">Wifi Included: {{ cabin.wifi_included }}</span>
+                <span class="card-title">Kids Allowed: {{ cabin.kids_allowed }}</span>
+                <span class="card-title">Max Adults: {{ cabin.max_adults }}</span>
+                <span class="card-title">Price Per Night: {{ cabin.price_per_night }}</span>
+            </div>
+            {% if session.user|lower == cabin.owner|lower %}
+            <div class="card-action">
+                <a href="#" class="btn green accent-4">Edit</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}

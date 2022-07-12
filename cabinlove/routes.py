@@ -6,7 +6,25 @@ from cabinlove.models import Location, Cabin, User
 
 @app.route("/")
 def home():
-    return render_template("cabins.html")
+    all_data = []
+    cabins = list(Cabin.query.order_by(Cabin.cabin_name).all())
+    for cabin in cabins:
+        cabin_data = {
+            "cabin_id": cabin.id,
+            "cabin_name": cabin.cabin_name,
+            "photo": cabin.photo,
+            "cabin_description": cabin.cabin_description,
+            "pet_friendly": cabin.pet_friendly,
+            "wifi_included": cabin.wifi_included,
+            "kids_allowed": cabin.kids_allowed,
+            "max_adults": cabin.max_adults,
+            "price_per_night": cabin.price_per_night,
+            "owner": User.query.filter(User.id == cabin.created_by).first(),
+            "location": Location.query.filter(
+                Location.id == cabin.location_id).first(),
+        }
+        all_data.append(cabin_data)
+    return render_template("cabins.html", cabins=all_data)
 
 
 @app.route("/locations")

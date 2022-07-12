@@ -25,7 +25,19 @@
                 <a href="{{ url_for('edit_location', location_id=location.id) }}" class="btn green accent-4">Edit</a>
             </div>
             <div class="card-action">
-                <a href="{{ url_for('delete_location', location_id=location.id) }}" class="btn green accent-4">Delete</a>
+                <a href="#modal-{{ location.id }}" class="btn green accent-4 modal-trigger">Delete</a>
+                <!-- delete modal confirmation -->
+                <div id="modal-{{ location.id }}" class="modal">
+                    <div class="modal-content">
+                        <h4>Delete Location</h4>
+                        <p>Are you sure you want to delete {{ location.location_name }}?</p>
+                        <small>Please note, this action cannot be reversed, and will also delete any cabin associated with it!</small>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                        <a href="{{ url_for('delete_location', location_id=location.id) }}" class="modal-close waves-effect waves-red btn-flat">Delete</a>
+                    </div>
+                </div>
             </div>
             {% else %}
             <div class="card-action">

@@ -52,7 +52,6 @@ def delete_location(location_id):
     location = Location.query.get_or_404(location_id)
     db.session.delete(location)
     db.session.commit()
-    # add delete many for cabins later
     return redirect(url_for("locations"))
 
 
@@ -62,6 +61,8 @@ def add_cabin():
         flash("You need to be logged in to add a cabin")
         return redirect(url_for("home"))
 
+    user = User.query.filter(
+            User.user_name == session["user"].lower()).first()
     locations = list(Location.query.order_by(Location.location_name).all())
     if request.method == "POST":
         cabin = Cabin(
@@ -74,7 +75,7 @@ def add_cabin():
             max_adults = request.form.get("max_adults"),
             price_per_night = request.form.get("price_per_night"),
             location_id = request.form.get("location_id"),
-            created_by = session["user"],
+            created_by = session["user_id"],
         )
         db.session.add(cabin)
         db.session.commit()

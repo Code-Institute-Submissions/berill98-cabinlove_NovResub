@@ -52,6 +52,21 @@
             <div class="card-action">
                 <a href="#" class="btn green accent-4">Edit</a>
             </div>
+            <div class="card-action">
+                <a href="#modal-{{ cabin.cabin_id }}" class="btn green accent-4 modal-trigger">Delete</a>
+                <!-- delete modal confirmation -->
+                <div id="modal-{{ cabin.cabin_id }}" class="modal">
+                    <div class="modal-content">
+                        <h4>Delete Cabin</h4>
+                        <p>Are you sure you want to delete {{ cabin.cabin_name }}?</p>
+                        <small>Please note, this action cannot be reversed!</small>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                        <a href="" class="modal-close waves-effect waves-red btn-flat">Delete</a>
+                    </div>
+                </div>
+            </div>
             {% endif %}
         </div>
     </div>

@@ -17,12 +17,30 @@ def locations():
 
 @app.route("/add_location", methods=["GET", "POST"])
 def add_location():
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage locations!")
+        return redirect(url_for("locations"))
+
     if request.method == "POST":
         location = Location(location_name=request.form.get("location_name"))
         db.session.add(location)
         db.session.commit()
         return redirect(url_for("locations"))
     return render_template("add_location.html")
+
+
+@app.route("/edit_location/<int:location_id>", methods=["GET", "POST"])
+def edit_location(location_id):
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage locations!")
+        return redirect(url_for("locations"))
+    
+    location = Location.query.get_or_404(location_id)
+    if request.method == "POST":
+        location.location_name = request.form.get("location_name")
+        db.session.commit()
+        return redirect(url_for("locations"))
+    return render_template("edit_location.html", location=location)
 
 
 @app.route("/add_cabin", methods=["GET", "POST"])
@@ -39,7 +57,7 @@ def add_cabin():
             max_adults = request.form.get("max_adults"),
             price_per_night = request.form.get("price_per_night"),
             location_id = request.form.get("location_id"),
-            created_by = request.form.get("created_by"),
+            created_by = session["user"],
         )
         db.session.add(cabin)
         db.session.commit()

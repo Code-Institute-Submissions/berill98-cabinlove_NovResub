@@ -3,6 +3,7 @@
 
 <h3 class="light-grey-text text-darken-4 center-align">Cabins</h3>
 
+{% if session.user %}
 <div class="row">
     <div class="col s12 center-align">
         <a href="{{ url_for('add_cabin') }}" class="btn-large light-green darken-2">
@@ -10,5 +11,22 @@
         </a>
     </div>
 </div>
+{% else %}
+<h3>You must be a registered user to list your cabin on Cabinlove!</h3>
+<div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('register') }}" class="btn-large light-green darken-2">
+            Register <i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('login') }}" class="btn-large light-green darken-2">
+            Login <i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+{% endif %}
 
 {% endblock %}

@@ -45,6 +45,10 @@ def edit_location(location_id):
 
 @app.route("/delete_location/<int:location_id>")
 def delete_location(location_id):
+    if session["user"] != "admin":
+        flash("You must be admin to manage locations!")
+        return redirect(url_for("locations"))
+
     location = Location.query.get_or_404(location_id)
     db.session.delete(location)
     db.session.commit()
@@ -54,6 +58,10 @@ def delete_location(location_id):
 
 @app.route("/add_cabin", methods=["GET", "POST"])
 def add_cabin():
+    if "user" not in session:
+        flash("You need to be logged in to add a cabin")
+        return redirect(url_for("home"))
+
     locations = list(Location.query.order_by(Location.location_name).all())
     if request.method == "POST":
         cabin = Cabin(
@@ -136,7 +144,7 @@ def profile(username):
         
     if "user" in session:
         return render_template("profile.html", username=session["user"])
-        
+
     return redirect(url_for("login"))
 
 

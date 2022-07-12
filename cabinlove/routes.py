@@ -43,6 +43,15 @@ def edit_location(location_id):
     return render_template("edit_location.html", location=location)
 
 
+@app.route("/delete_location/<int:location_id>")
+def delete_location(location_id):
+    location = Location.query.get_or_404(location_id)
+    db.session.delete(location)
+    db.session.commit()
+    # add delete many for cabins later
+    return redirect(url_for("locations"))
+
+
 @app.route("/add_cabin", methods=["GET", "POST"])
 def add_cabin():
     locations = list(Location.query.order_by(Location.location_name).all())

@@ -86,8 +86,8 @@ def add_cabin():
 def register():
     if request.method == "POST":
         # check if username already exists in db
-        existing_user = User.query.filter(User.user_name == \
-                                           request.form.get("username").lower()).all()
+        existing_user = User.query.filter(
+            User.user_name == request.form.get("username").lower()).first()
         
         if existing_user:
             flash("Username already exists")
@@ -103,6 +103,7 @@ def register():
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
+        session["user_id"] = user.id
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
 

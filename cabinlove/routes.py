@@ -114,15 +114,16 @@ def register():
 def login():
     if request.method == "POST":
         # check if username exists in db
-        existing_user = User.query.filter(User.user_name == \
-                                           request.form.get("username").lower()).all()
+        existing_user = User.query.filter(
+            User.user_name == request.form.get("username").lower()).first()
 
         if existing_user:
             print(request.form.get("username"))
             # ensure hashed password matches user input
             if check_password_hash(
-                    existing_user[0].password, request.form.get("password")):
+                    existing_user.password, request.form.get("password")):
                         session["user"] = request.form.get("username").lower()
+                        session["user_id"] = existing_user.id
                         flash("Welcome, {}".format(
                             request.form.get("username")))
                         return redirect(url_for(

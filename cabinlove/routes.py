@@ -101,6 +101,29 @@ def add_cabin():
     return render_template("add_cabin.html", locations=locations)
 
 
+@app.route("/edit_cabin/<int:cabin_id>", methods=["GET", "POST"])
+def cabin_location(cabin_id):
+    if "user" not in session or session["user"] != "owner":
+        flash("You must be the owner of the cabin to manage it!")
+        return redirect(url_for("cabin"))
+    
+    cabin = Cabin.query.get_or_404(cabin_id)
+    if request.method == "POST":
+        cabin.cabin_name = request.form.get("cabin_name")
+        cabin.photo = request.form.get("photo_url"),
+        cabin.cabin_description = request.form.get("cabin_description"),
+        cabin.pet_friendly = bool(True if request.form.get("pet_friendly") else False),
+        cabin.wifi_included = bool(True if request.form.get("wifi_included") else False),
+        cabin.kids_allowed = bool(True if request.form.get("kids_allowed") else False),
+        cabin.max_adults = request.form.get("max_adults"),
+        cabin.price_per_night = request.form.get("price_per_night"),
+        cabin.location_id = request.form.get("location_id"),
+        cabin.created_by = session["user_id"],
+        db.session.commit()
+        return redirect(url_for("cabins"))
+    return render_template("edit_cabin.html", cabin=cabin)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

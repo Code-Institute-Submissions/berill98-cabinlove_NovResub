@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="light-blue-text text-darken-4 center-align">Edit Cabin</h3>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_cabin', cabin_id=cabin.id) }}">
+        <!-- cabin name -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-green-text text-darken-4"></i>
+                <input id="cabin_name" name="cabin_name" minlength="3" maxlength="60" type="text" class="validate"
+                    required>
+                <label for="cabin_name">Cabin Name</label>
+            </div>
+        </div>
+        <!-- photo -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-green-text text-darken-4"></i>
+                <input id="photo_url" name="photo_url" minlength="3" maxlength="80" type="text" class="validate"
+                    required>
+                <label for="photo_url">Photo URL</label>
+            </div>
+        </div>
+        <!-- cabin description -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-green-text text-darken-4"></i>
+                <textarea id="cabin_description" name="cabin_description" minlength="5" maxlength="200" type="text"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="cabin_description">Cabin Description</label>
+            </div>
+        </div>
+        <!-- pet friendly -->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+                    <label for="pet_friendly">
+                        <input id="pet_friendly" name="pet_friendly" type="checkbox">
+                        <span class="lever"></span>
+                        Pet friendly?
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- wifi included -->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+                    <label for="wifi_included">
+                        <input id="wifi_included" name="wifi_included" type="checkbox">
+                        <span class="lever"></span>
+                        Is Wi-Fi included?
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- kids allowed -->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+                    <label for="kids_allowed">
+                        <input id="kids_allowed" name="kids_allowed" type="checkbox">
+                        <span class="lever"></span>
+                        Are kids allowed?
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- max adults -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-green-text text-darken-4"></i>
+                <input id="max_adults" name="max_adults" minlength="1" maxlength="2" type="text" class="validate"
+                    required>
+                <label for="max_adults">Maximum adults</label>
+            </div>
+        </div>
+        <!--price -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-green-text text-darken-4"></i>
+                <input id="price_per_night" name="price_per_night" minlength="1" maxlength="7" type="text"
+                    class="validate" required>
+                <label for="price_per_night">Price per night in $</label>
+            </div>
+        </div>
+        <!-- location id -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <select id="location_id" name="location_id" class="validate" required>
+                    <option value="" disabled selected>Choose Location</option>
+                    {% for location in locations %}
+                    <option value="{{ location.id }}">{{ location.location_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="location_id">Location</label>
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <a href="{{ url_for('cabins') }}" class="btn-large red text-shadow">
+                    Cancel <i class="fas fa-times-circle right"></i>
+                </a>
+                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                    Edit Cabin <i class="fas fa-edit right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

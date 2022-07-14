@@ -102,7 +102,7 @@ def add_cabin():
 
 
 @app.route("/edit_cabin/<int:cabin_id>", methods=["GET", "POST"])
-def cabin_location(cabin_id):
+def edit_cabin(cabin_id):
     if "user" not in session or session["user"] != "owner":
         flash("You must be the owner of the cabin to manage it!")
         return redirect(url_for("cabin"))
@@ -122,6 +122,18 @@ def cabin_location(cabin_id):
         db.session.commit()
         return redirect(url_for("cabins"))
     return render_template("edit_cabin.html", cabin=cabin)
+
+
+@app.route("/delete_cabin/<int:cabin_id>")
+def delete_cabin(cabin_id):
+    if "user" not in session or session["user"] != "owner":
+        flash("You must be the owner to manage the cabin!")
+        return redirect(url_for("cabins"))
+
+    cabin = Cabin.query.get_or_404(cabin_id)
+    db.session.delete(cabin)
+    db.session.commit()
+    return redirect(url_for("home"))
 
 
 @app.route("/register", methods=["GET", "POST"])

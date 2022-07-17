@@ -4,7 +4,6 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    font-siye: 100%;
 }
 
 main {
@@ -14,4 +13,12 @@ main {
 .brand-logo {
     font-family: "Lobster";
     margin-left: 20px;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }

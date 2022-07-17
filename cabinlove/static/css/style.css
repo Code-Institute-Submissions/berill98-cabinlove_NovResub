@@ -22,3 +22,31 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+/* footer */
+.footer-box {
+    text-align: center;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-heading {
+    text-transform: uppercase;
+}
+
+#social-media-links {
+    display: inline-flex;
+    text-align: center;
+}
+
+#social-media-links i {
+    font-size: 150%;
+    margin: 0 20px 0 0;
+    color: #fff;
+}
+
+#social-media-links i:hover {
+    color: #316231;
+}

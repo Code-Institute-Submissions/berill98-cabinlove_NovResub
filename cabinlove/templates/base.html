@@ -29,7 +29,7 @@
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="{{ url_for('add_cabin') }}">New Cabin</a></li>
                     {% if session.user|lower == "admin"|lower %}
-                        <li><a href="{{ url_for('add_location') }}">New Location</a></li>
+                    <li><a href="{{ url_for('add_location') }}">New Location</a></li>
                     {% endif %}
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
@@ -60,13 +60,13 @@
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="light-red lighten-4 center-align">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="light-red lighten-4 center-align">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 
@@ -77,11 +77,31 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer green darken-4">
+    <footer class="page-footer brown darken-4">
+        <div class="container footer-box">
+            <ul id="social-media-links">
+                <li>
+                    <a class="grey-text text-lighten-3" href="https://www.facebook.com/" aria-label="Go to Facebook"
+                        target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li>
+                    <a class="grey-text text-lighten-3" href="https://www.instagram.com/" aria-label="Go to Instagram"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a class="grey-text text-lighten-3" href="https://twitter.com/" aria-label="Go to Twitter"
+                        target="_blank"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a class="grey-text text-lighten-3" href="https://www.tiktok.com/en/" aria-label="Go to TikTok"
+                        target="_blank"><i class="fab fa-tiktok"></i></a>
+                </li>
+            </ul>
+        </div>
         <div class="footer-copyright">
             <div class="container">
-                Cabinlove - Find your next dream destination!
-                <a class="white-text right" href="https://github.com/berill98" target="_blank">&copy; berill98</a>
+                <a class="white-text" href="https://github.com/berill98" aria-label="Go to GitHub"
+                        target="_blank">© 2022 Berill H.</a>
             </div>
         </div>
     </footer>

@@ -210,3 +210,9 @@ def logout():
     flash("You have been logged out")
     session.clear()
     return redirect(url_for("login"))
+
+
+@app.route("/cabins_at_locations/<int:location_id>")
+def cabins_at_locations(location_id):
+    cabins_at_locations = list(Cabin.query.get(Cabin.cabin_name).all())
+    return render_template("locations.html", locations=locations)

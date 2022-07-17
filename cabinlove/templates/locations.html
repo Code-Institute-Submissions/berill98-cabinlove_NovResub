@@ -41,7 +41,7 @@
             </div>
             {% else %}
             <div class="card-action">
-                <a href="#" class="btn green darken-4">I want to go there!</a>
+                <a href="{{ url_for('cabins_at_locations', location_id=location.id) }}" class="btn green darken-4">I want to go there!</a>
             </div>
             {% endif %}
         </div>

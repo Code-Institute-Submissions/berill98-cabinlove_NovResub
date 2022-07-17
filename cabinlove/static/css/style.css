@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-siye: 100%;
 }
 
 main {
     flex: 1 0 auto;
+}
+
+.brand-logo {
+    font-family: "Lobster";
+    margin-left: 20px;
 }

@@ -10,18 +10,27 @@
     </div>
 </div>
 {% else %}
-<h3>You must be a registered user to list your cabin on Cabinlove!</h3>
 <div class="row">
-    <div class="col s12 center-align">
-        <a href="{{ url_for('register') }}" class="btn-large light-green darken-2">
-            Register <i class="fas fa-plus-square right"></i>
+    <h3 id="welcome">Hi, welcome to Cabinlove!</h3>
+    <p>
+        These cabins are like no other. Relax and reconnect with nature in your very own cabin. Whether you
+        are looking for a wild family adventure with your dog in the great outdoors, an unforgettable group getaway, or a
+        romantic retreat for two - we have a perfect cabin for you!<br>
+        In order to list your cabin as a host on Cabinlove, you need to sign in. If you already have an account, you can
+        use it to sign in.
+        If you do not already have a Cabinlove account, you can create one free of charge by registering with your
+        email address. It only takes a few moments.
+    </p>
+</div>
+<div class="row buttons">
+    <div class="col s6 center-align">
+        <a href="{{ url_for('register') }}" class="btn-large green darken-4">
+            Register <i class="fa-solid fa-user-astronaut"></i>
         </a>
     </div>
-</div>
-<div class="row">
-    <div class="col s12 center-align">
-        <a href="{{ url_for('login') }}" class="btn-large light-green darken-2">
-            Login <i class="fas fa-plus-square right"></i>
+    <div class="col s6 center-align">
+        <a href="{{ url_for('login') }}" class="btn-large green darken-4">
+            Login <i class="fa-solid fa-arrow-right-to-bracket"></i>
         </a>
     </div>
 </div>
@@ -30,13 +39,13 @@
 <div class="row">
     {% for cabin in cabins %}
     <div class="col s12 m6 l3">
-        <div class="card light-blue darken-4 center-align">
+        <div class="card  brown darken-2 center-align">
             <div class="card-content white-text">
                 <span class="card-title">Cabin ID: {{ cabin.cabin_id }}</span>
                 <span class="card-title">Cabin Name: {{ cabin.cabin_name }}</span>
                 <span class="card-title">Owner: {{ cabin.owner }}</span>
                 <span class="card-title">Location: {{ cabin.location }}</span>
-                <span class="card-title">Photo: {{ cabin.photo }}</span>
+                <span class="card-title">Photo: </span>
                 <img src="{{ cabin.photo }}" alt="{{ cabin.cabin_name }}" class="responsive-img"
                     onError="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png';">
                 <span class="card-title">Description: {{ cabin.cabin_description }}</span>
@@ -61,7 +70,8 @@
                     </div>
                     <div class="modal-footer">
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
-                        <a href="{{ url_for('delete_cabin', cabin_id=cabin.id) }}" class="modal-close waves-effect waves-red btn-flat">Delete</a>
+                        <a href="{{ url_for('delete_cabin', cabin_id=cabin.id) }}"
+                            class="modal-close waves-effect waves-red btn-flat">Delete</a>
                     </div>
                 </div>
             </div>

@@ -50,3 +50,25 @@ body {
 #social-media-links i:hover {
     color: #316231;
 }
+
+#welcome {
+    font-family: Lobster;
+}
+
+p {
+    text-align: justify;
+}
+
+.buttons {
+    margin-bottom: 30px;
+}
+
+.btn-large {
+    font-size: 120%;
+    border-radius: 10px;
+}
+
+.card {
+    border-radius: 10px;  
+}
+

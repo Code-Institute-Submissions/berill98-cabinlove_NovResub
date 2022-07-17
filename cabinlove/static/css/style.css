@@ -51,7 +51,7 @@ body {
     color: #316231;
 }
 
-#welcome {
+.main-text {
     font-family: Lobster;
 }
 
@@ -65,6 +65,10 @@ p {
 
 .btn-large {
     font-size: 120%;
+    border-radius: 10px;
+}
+
+.btn {
     border-radius: 10px;
 }
 

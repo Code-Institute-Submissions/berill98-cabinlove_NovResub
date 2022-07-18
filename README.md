@@ -6,7 +6,11 @@ The Cabinlove is an online collection of cabins all over the world. I wanted to 
 
 ## Site Owner Goals
 
-## Gitpod Reminders
+- To provide  information about cabins all over the world.
+- To promote cabins.
+- To encourage users to create an account.
+- To encourage users to create cabins for the website.
+- To present the user with a website that is fully responsive and easy to use.
 
 ## User stories
 

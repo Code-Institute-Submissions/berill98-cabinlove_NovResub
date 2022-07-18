@@ -14,17 +14,33 @@ The Cabinlove is an online collection of cabins all over the world. I wanted to 
 
 ## User stories
 
-`python3 -m http.server`
+As first-time or casual user (as someone who has not registered):
 
-A blue button should appear to click: _Make Public_,
+- As an user I want to understand the main purpose of the website easily.
+- As an user I want to be able to navigate throughout the site.
+- As an user I want to experience good responsive design, so I can access the site on different devices.
+- As an user I want to enjoy nice and clean design and style that is inline with the subject of the site.
+- As an user I want to browse a variety of cabins all around the world.
+- As an user I want to list location specific cabins.
+- As an user I want to be able to view cabins without having to create an account.
+- As an user I want the option to register for an account, if I want to return later.
 
-Another blue button should appear to click: _Open Browser_.
+As a returning or registered user:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- As an user I want to log into my account.
+- As an user I want to log out from my account.
+- As an user I want to create my own cabins.
+- As an user I want to edit the cabins I have added.
+- As an user I want to delete the cabins I have added.
+- As an user I want to contact and follow the website via social media.
 
-A blue button should appear to click: _Make Public_,
+As admin:
 
-Another blue button should appear to click: _Open Browser_.
+- As admin I want to edit my own cabins.
+- As admin I want to add new cabins.
+- As admin I want to add new locations.
+- As admin I want to edit existing locations.
+- As admin I want to delete existing locations.
 
 ## UX
 

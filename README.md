@@ -1,8 +1,12 @@
 # Cabinlove
 
+Welcome to the Cabinlove website!
+
+Cabinlove is a website that aims to provide information about a variety of cabins from all over the world, where could explore, create and share cabins in one place.
+
 ## The goal for this project
 
-The Cabinlove is an online collection of cabins all over the world. I wanted to create a site where people could explore, create and share cabins in one place. I wanted to build a responsive site that can be accessed across all devices and display the information in an user-frienldy way, contributing to an overall good user experience.
+The Cabinlove is an online collection of cabins all over the world. I wanted to create a site whre users can easily access information about the cabins, and also create and save their owns. I wanted to build a responsive site that can be accessed across all devices and display the information in an user-frienldy way, contributing to an overall good user experience.
 
 ## Site Owner Goals
 

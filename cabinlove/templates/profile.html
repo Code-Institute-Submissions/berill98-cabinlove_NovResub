@@ -4,9 +4,17 @@
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
-                <h3 class="center-align light-blue-text text-darken-4">
+                <h3 class="main-text center-align">
                     {{ username }}'s Profile
                 </h3>
+                <p class="center-align brown-text darken-2">
+                    Hello {{ username }}, it's nice to see you again!
+                    If you would like to browse the cabins please check the Home page and the Locations page.
+                    If you would like to add a new cabin please go to the New Cabin page.
+                    {% if session.user|lower == "admin"|lower %}
+                    If you would like to add a new location please go to the New Location page.
+                    {% endif %}
+                </p>
             </div>
         </div>
     </div>

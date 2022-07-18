@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="main-text center-align">Cabins</h3>
+
 {% if session.user %}
 <div class="row">
     <div class="col s12 center-align">
-        <a href="{{ url_for('add_cabin') }}" class="btn-large light-green darken-2">
+        <a href="{{ url_for('add_cabin') }}" class="btn-large green darken-4">
             Add Cabin <i class="fas fa-plus-square right"></i>
         </a>
     </div>
@@ -48,7 +50,7 @@
                 <span class="card-title">Photo: </span>
                 <img src="{{ cabin.photo }}" alt="{{ cabin.cabin_name }}" class="responsive-img"
                     onError="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png';">
-                <span class="card-title">Description: {{ cabin.cabin_description }}</span>
+                <span class="card-title">Description: {{ cabin.cabin_description|truncate(20, True) }}</span>
                 <span class="card-title">Pet Friendly: {{ cabin.pet_friendly }}</span>
                 <span class="card-title">Wifi Included: {{ cabin.wifi_included }}</span>
                 <span class="card-title">Kids Allowed: {{ cabin.kids_allowed }}</span>
@@ -57,7 +59,7 @@
             </div>
             {% if session.user|lower == cabin.owner|lower %}
             <div class="card-action">
-                <a href="{{ url_for('edit_cabin', cabin_id=cabin.id) }}" class="btn green accent-4">Edit</a>
+                <a href="{{ url_for('edit_cabin', cabin_id=cabin.cabin_id) }}" class="btn green accent-4">Edit</a>
             </div>
             <div class="card-action">
                 <a href="#modal-{{ cabin.cabin_id }}" class="btn green accent-4 modal-trigger">Delete</a>
@@ -70,7 +72,7 @@
                     </div>
                     <div class="modal-footer">
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
-                        <a href="{{ url_for('delete_cabin', cabin_id=cabin.id) }}"
+                        <a href="{{ url_for('delete_cabin', cabin_id=cabin.cabin_id) }}"
                             class="modal-close waves-effect waves-red btn-flat">Delete</a>
                     </div>
                 </div>

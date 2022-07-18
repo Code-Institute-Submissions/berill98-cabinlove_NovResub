@@ -2,7 +2,7 @@
 
 ## The goal for this project
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The Cabinlove is an online collection of cabins all over the world. I wanted to create a site where people could explore, create and share cabins in one place. I wanted to build a responsive site that can be accessed across all devices and display the information in an user-frienldy way, contributing to an overall good user experience.
 
 ## Site Owner Goals
 

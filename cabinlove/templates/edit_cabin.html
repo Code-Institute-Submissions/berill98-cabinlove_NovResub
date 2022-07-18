@@ -9,8 +9,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-house prefix brown-text darken-2"></i>
-                <input id="cabin_name" name="cabin_name" minlength="3" maxlength="60" type="text" class="validate"
-                    required>
+                <input id="cabin_name" name="cabin_name" minlength="3" maxlength="60" type="text"
+                    class="validate" value="{{ cabin.cabin_name }}" required>
                 <label for="cabin_name">Cabin Name</label>
             </div>
         </div>
@@ -18,85 +18,108 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-camera-retro prefix brown-text darken-2"></i>
-                <input id="photo_url" name="photo_url" minlength="3" maxlength="80" type="text" class="validate"
-                    required>
-                <label for="photo_url">Photo URL</label>
+                <input id="photo" name="photo" minlength="3" maxlength="80" type="url"
+                    class="validate" value="{{ cabin.photo }}" required>
+                <label for="photo">Photo URL</label>
             </div>
         </div>
+
         <!-- cabin description -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-align-justify prefix brown-text darken-2"></i>
                 <textarea id="cabin_description" name="cabin_description" minlength="5" maxlength="200" type="text"
-                    class="materialize-textarea validate" required></textarea>
+                    class="materialize-textarea validate" required>{{ cabin.cabin_description }}</textarea>
                 <label for="cabin_description">Cabin Description</label>
             </div>
         </div>
+
         <!-- pet friendly -->
         <div class="row">
             <div class="input-field col s12">
                 <div class="switch">
                     <i class="fa-solid fa-paw prefix brown-text darken-2"></i>
                     <label for="pet_friendly">
-                        <input id="pet_friendly" name="pet_friendly" type="checkbox">
+                        {% if cabin.pet_friendly == True %}
+                            <input id="pet_friendly" name="pet_friendly" type="checkbox" checked>
+                        {% else %}
+                            <input id="pet_friendly" name="pet_friendly" type="checkbox">
+                        {% endif %}
                         <span class="lever"></span>
                         Pet friendly?
                     </label>
                 </div>
             </div>
         </div>
+
         <!-- wifi included -->
         <div class="row">
             <div class="input-field col s12">
                 <div class="switch">
                     <i class="fa-solid fa-house-signal prefix brown-text darken-2"></i>
                     <label for="wifi_included">
-                        <input id="wifi_included" name="wifi_included" type="checkbox">
+                        {% if cabin.wifi_included == True %}
+                            <input id="wifi_included" name="wifi_included" type="checkbox" checked>
+                        {% else %}
+                            <input id="wifi_included" name="wifi_included" type="checkbox">
+                        {% endif %}
                         <span class="lever"></span>
                         Is Wi-Fi included?
                     </label>
                 </div>
             </div>
         </div>
+
         <!-- kids allowed -->
         <div class="row">
             <div class="input-field col s12">
                 <div class="switch">
                     <i class="fa-solid fa-child-reaching prefix brown-text darken-2"></i>
                     <label for="kids_allowed">
-                        <input id="kids_allowed" name="kids_allowed" type="checkbox">
+                        {% if cabin.kids_allowed == True %}
+                            <input id="kids_allowed" name="kids_allowed" type="checkbox" checked>
+                        {% else %}
+                            <input id="kids_allowed" name="kids_allowed" type="checkbox">
+                        {% endif %}
                         <span class="lever"></span>
                         Are kids allowed?
                     </label>
                 </div>
             </div>
         </div>
+
         <!-- max adults -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-people-group prefix brown-text darken-2"></i>
-                <input id="max_adults" name="max_adults" minlength="1" maxlength="2" type="text" class="validate"
-                    required>
+                <input id="max_adults" name="max_adults" minlength="1" maxlength="2" type="text"
+                    class="validate" value="{{ cabin.max_adults }}" required>
                 <label for="max_adults">Maximum adults</label>
             </div>
         </div>
+
         <!--price -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-money-bill-1-wave prefix brown-text darken-2"></i>
                 <input id="price_per_night" name="price_per_night" minlength="1" maxlength="7" type="text"
-                    class="validate" required>
+                    class="validate" value="{{ cabin.price_per_night }}" required>
                 <label for="price_per_night">Price per night in $</label>
             </div>
         </div>
+
         <!-- location id -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-location-pin prefix brown-text darken-2"></i>
                 <select id="location_id" name="location_id" class="validate" required>
-                    <option value="" disabled selected>Choose Location</option>
+                    <option value="" disabled>Choose Location</option>
                     {% for location in locations %}
-                    <option value="{{ location.id }}">{{ location.location_name }}</option>
+                        {% if location.id == cabin.location_id %}
+                            <option value="{{ location.id }}" selected>{{ location.location_name }}</option>
+                        {% else %}
+                            <option value="{{ location.id }}">{{ location.location_name }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="location_id">Location</label>
@@ -105,7 +128,7 @@
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
-                <a href="{{ url_for('cabins') }}" class="btn-large red darken-4 text-shadow">
+                <a href="{{ url_for('home') }}" class="btn-large red darken-4 text-shadow">
                     Cancel <i class="fas fa-times-circle right"></i>
                 </a>
                 <button type="submit" class="btn-large green darken-4 text-shadow">

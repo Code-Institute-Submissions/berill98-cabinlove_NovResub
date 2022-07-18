@@ -2,27 +2,52 @@
 {% block content %}
 
 <div class="row">
-    {% for cabin in cabins %}
-    <div class="col s12 m6 l3">
-        <div class="card brown darken-2 center-align">
-            <div class="card-content white-text">
-                <span class="card-title">Cabin ID: {{ cabin.cabin_id }}</span>
-                <span class="card-title">Cabin Name: {{ cabin.cabin_name }}</span>
-                <span class="card-title">Owner: {{ cabin.owner }}</span>
-                <span class="card-title">Location: {{ cabin.location }}</span>
-                <span class="card-title">Photo: </span>
-                <img src="{{ cabin.photo }}" alt="{{ cabin.cabin_name }}" class="responsive-img"
-                    onError="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png';">
-                <span class="card-title">Description: {{ cabin.cabin_description }}</span>
-                <span class="card-title">Pet Friendly: {{ cabin.pet_friendly }}</span>
-                <span class="card-title">Wifi Included: {{ cabin.wifi_included }}</span>
-                <span class="card-title">Kids Allowed: {{ cabin.kids_allowed }}</span>
-                <span class="card-title">Max Adults: {{ cabin.max_adults }}</span>
-                <span class="card-title">Price Per Night: {{ cabin.price_per_night }}</span>
+    {% if cabins|length > 0 %}
+        {% for cabin in cabins %}
+        <div class="col s12 m6 l4">
+            <div class="card brown darken-2 center-align">
+                <div class="card-content white-text">
+                    <span class="card-title">Cabin ID: {{ cabin.cabin_id }}</span>
+                    <span class="card-title">Cabin Name: {{ cabin.cabin_name }}</span>
+                    <span class="card-title">Owner: {{ cabin.owner }}</span>
+                    <span class="card-title">Location: {{ cabin.location }}</span>
+                    <span class="card-title">Photo: </span>
+                    <img src="{{ cabin.photo }}" alt="{{ cabin.cabin_name }}" class="responsive-img"
+                        onError="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png';">
+                    <span class="card-title">Description: {{ cabin.cabin_description|truncate(20, True) }}</span>
+                    <span class="card-title">Pet Friendly: {{ cabin.pet_friendly }}</span>
+                    <span class="card-title">Wifi Included: {{ cabin.wifi_included }}</span>
+                    <span class="card-title">Kids Allowed: {{ cabin.kids_allowed }}</span>
+                    <span class="card-title">Max Adults: {{ cabin.max_adults }}</span>
+                    <span class="card-title">Price Per Night: {{ cabin.price_per_night }}</span>
+                </div>
+                {% if session.user|lower == cabin.owner|lower %}
+                <div class="card-action">
+                    <a href="{{ url_for('edit_cabin', cabin_id=cabin.id) }}" class="btn green accent-4">Edit</a>
+                </div>
+                <div class="card-action">
+                    <a href="#modal-{{ cabinid }}" class="btn green accent-4 modal-trigger">Delete</a>
+                    <!-- delete modal confirmation -->
+                    <div id="modal-{{ cabin.cabin_id }}" class="modal">
+                        <div class="modal-content">
+                            <h4>Delete Cabin</h4>
+                            <p>Are you sure you want to delete {{ cabin.cabin_name }}?</p>
+                            <small>Please note, this action cannot be reversed!</small>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                            <a href="{{ url_for('delete_cabin', cabin_id=cabin.id) }}"
+                                class="modal-close waves-effect waves-red btn-flat">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
-    </div>
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+    We're sorry - there are currently no cabins in {{ location }}
+    {% endif %}
 </div>
 
 {% endblock %}

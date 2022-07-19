@@ -2,6 +2,8 @@
 
 Welcome to the Cabinlove website!
 
+![Am I responsive?](cabinlove/static/images/responsive.png)
+
 Cabinlove is a website that aims to provide information about a variety of cabins from all over the world, where could explore, create and share cabins in one place.
 
 ## The goal for this project

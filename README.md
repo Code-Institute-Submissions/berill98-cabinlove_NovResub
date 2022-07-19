@@ -78,11 +78,68 @@ Hand-drawn wireframes.
 
 ### Existing Features
 
+1. Design
+    - A clean and simple design and layout with consistency throughout.
+    ![Design](cabinlove/static/images/home.png)
+    - Easy navigation by using the navigation bar. Nav links are clearly idenfied both on desktop and when sidenav is expanded on smaller the devices.
+    - Responsive design allowing users to use site across all devices.
+    ![Am I responsive?](cabinlove/static/images/responsive.png)
+2. Cabins
+    - Cabins can be created, read, updated and deleted (CRUD) by the registered users.
+    ![New cabin](cabinlove/static/images/newcabin.png)
+    ![Edit and Delete function](cabinlove/static/images/edit_delete.png)
+    - Users of the site, either logged in or not, can list cabins by locations.
+    ![I want to go there](cabinlove/static/images/want_to_go.png)
+    - Logged in users have access to their profile, where they can view their own cabins.
+    ![Profile](cabinlove/static/images/profile.png)
+    - Flash messages will appear when users create, edit, delete the cabins.
+    ![Flash](cabinlove/static/images/flash.png)
+3. Register, Login and Logout
+    - Users of the site can create an account.
+    ![Register](cabinlove/static/images/register.png)
+    - Users can login into their existing account.
+    ![Login](cabinlove/static/images/login.png)
+    - Users can logout of their account.
+4. Locations
+    - Admin can create, edit and delete locations.
+    ![New location](cabinlove/static/images/newlocation.png)
+    ![Edit and Delete location](cabinlove/static/images/editlocation.png)
+
+### Defensive Programming
+
+To protect the site and defend against any "brute force", I added some defensive programming:
+Created Python functions that:
+- Check if a user is logged in. This checks if the session user is active, if so allows the user to perform the action. If not will redirect user to the appropriate page with flash message.
+- Check if it is correct user (has the permission). For example with edit cabins, this checks if the session user is equal to the one who created the cabin. If so, it allows the user to edit the cabin. If the check fails, it redirects the user with appropriate flash message.
+- Check if user is superuser (is admin). The admin is the only one who can add, edit and delete locations. If the check fails, the user is redirected and a flash message displayed.
+- Certain action buttons are only displayed to certain users, for example 'Add cabin' is only displayed to users that are logged in. Use of Jinga for loops and if conditions to display if users are authorised to do so. 
+
 ### Features left to implement
 
-- contact form
-- newsletter
-- possibility of deleting account
+- A contact form where users can ask for more informations regarding the cabins.
+- An option for newsletter signup.
+- Users to have ability to edit account, including changing password.
+- Users to have ability to delete their account.
+- Individual pages for all the cabins.
+
+## Structure of the site
+
+The structure of the site has been developed to enable users to access and use the site with ease.
+- Home Page- accessible by all users, whether logged in or not. 
+- Navbar - is accessible to all users. The navbar changes to a sidenav on tablet screens and smaller for responsiveness. The options available in the navbar change depending on whether a user is logged in or not.
+
+    * For not logged in users:  
+![Navbar for logged in users](cabinlove/static/images/navbar_notloggedin.png)
+    * For logged in users:  
+![Navbar for not logged in users](cabinlove/static/images/navbar_loggedin.png)
+    * For admin:  
+![Navbar for admin](cabinlove/static/images/navbar_admin.png)
+
+- List of cabins is accessible to all users, whether logged in or not.
+- Add new cabin is accessible only to registered users.
+- Edit cabin and Delete cabin is accessible only to the registered user who created that cabin.
+- The Profile page has the users name displayed in the welcome message. Users can see all the cabins they've created on this page.
+
 
 ## Technologies used
 

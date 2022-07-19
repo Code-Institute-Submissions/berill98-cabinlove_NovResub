@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% if session.user %}
 <h3 class="main-text center-align">Cabins</h3>
 
-{% if session.user %}
 <div class="row">
     <div class="col s12 center-align">
         <a href="{{ url_for('add_cabin') }}" class="btn-large green darken-4">

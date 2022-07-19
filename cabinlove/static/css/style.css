@@ -23,6 +23,35 @@ body {
     background-size: cover;
 }
 
+.main-text {
+    font-family: Lobster;
+}
+
+p {
+    text-align: justify;
+}
+
+.buttons {
+    margin-bottom: 30px;
+}
+
+.btn-large {
+    font-size: 120%;
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+#welcome {
+    background-color: rgba(8, 9, 8, 0.905);
+}
+
 /* footer */
 .footer-box {
     text-align: center;
@@ -50,29 +79,3 @@ body {
 #social-media-links i:hover {
     color: #316231;
 }
-
-.main-text {
-    font-family: Lobster;
-}
-
-p {
-    text-align: justify;
-}
-
-.buttons {
-    margin-bottom: 30px;
-}
-
-.btn-large {
-    font-size: 120%;
-    border-radius: 10px;
-}
-
-.btn {
-    border-radius: 10px;
-}
-
-.card {
-    border-radius: 10px;  
-}
-

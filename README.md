@@ -106,4 +106,3 @@ I have used my own README.md file from MS2 as inspiration for this README.md.
 ## Acknowledgments
 
 My mentor Tim for his support and advice.
-I would also like to thank the Code Institute tutor team for the assistance.

@@ -71,6 +71,44 @@ Mozzilla Firefox
 
 </details>
 
+## Manual Testing
+
+Throughout development manual testing was carried out, in addition to futher testing at the end of the project.
+
+- Navbar
+    - The navbar links take user to relevant pages
+- Brand logo
+    - Brand logo takes user back to the Home page
+- Social media
+    - The social media links open in a seperate tab to relevant site
+- Home
+    - Home page displays all the cabins. Those who are registered users can add new cabins. For users who created the cabins Edit and Delete buttons are displayed.
+- Add cabin
+    - Form tested through validator. It highlights to the user what is required if it is not filled in correctly.
+    - Once created it takes back to the cabins page.
+- Edit cabin
+    - Form tested through validator. It highlights to the user what is required if it is not filled in correctly.
+    - Once edited it takes back to the cabins page.
+- Delete cabin 
+    - This function works well. First it asks the user if they really want to delete the cabin.
+- Locations
+    - The Locations page displays all the locations. Only the admin can add new locations and edit or delete existing locations.
+- Add location
+    - Form is validated. Once created it takes back to the Locations page.
+- Edit location
+    - Form is validated. Once edited it takes back to the locations page.
+- I want to go there button
+    - I want to go there button works well. Once clicked it takes the user to a new page where the cabins are listed by the location.
+- Register Form
+    - Form is validated. It highlights to the user what is required if it is not filled in correctly.
+    - Once registered takes user to their profile page
+- Login Form
+    - Exisitng users can easily log into their profile
+    - If successful, takes users to their profile and welcome message displayed
+    - If unsuccessful a flash message will appear prompting users that password and or username is incorrect
+- Logout
+    - Takes back the user to the Log in page.
+    - Once logged out user is not able to see the Add cabin, Edit cabin, Delete cabin functions.
 
 ## Unfixed Bugs
 

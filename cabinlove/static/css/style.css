@@ -50,7 +50,8 @@ p {
 
 #welcome {
     background-color: rgba(141, 123, 100, 0.5);
-    padding: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 /* footer */

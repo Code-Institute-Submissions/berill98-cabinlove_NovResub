@@ -112,4 +112,6 @@ Throughout development manual testing was carried out, in addition to futher tes
 
 ## Unfixed Bugs
 
+There are no unfixed bugs that I am aware of.
+
 ## User story testing

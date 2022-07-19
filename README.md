@@ -57,11 +57,22 @@ As admin:
 
 - The icons on the website were taken from [FontAwesome](https://fontawesome.com/).
 
-### Colors and images
+### Colors
 
-- The main colours on the website are different browns, white, and dark green. This is because I wanted to use natural colours.
+- The main colours on the website are different browns, white, and dark green. This is because I wanted to use natural colours which are inline with the theme of the site.
 
 ### Wireframes
+
+Hand-drawn wireframes.
+<details><summary><b>Wireframes</b> (click to expand)</summary>
+
+- [Home Page](cabinlove/static/images/wf_home.jpg)
+- [Login Page](cabinlove/static/images/wf_login.jpg)
+- [Registration Page](cabinlove/static/images/wf_resgister.jpg)
+- [Locations page](cabinlove/static/images/wf_locations.jpg)
+- [Profile page](cabinlove/static/images/wf_profile.jpg)
+
+</details>
 
 ## Features
 

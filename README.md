@@ -140,6 +140,9 @@ The structure of the site has been developed to enable users to access and use t
 - Edit cabin and Delete cabin is accessible only to the registered user who created that cabin.
 - The Profile page has the users name displayed in the welcome message. Users can see all the cabins they've created on this page.
 
+- Database schema design was created using [Balsamiq](https://balsamiq.com/), please see below.
+
+![Database Schema Diagram](cabinlove/static/images/database_schema.png)
 
 ## Technologies used
 
@@ -165,7 +168,6 @@ The structure of the site has been developed to enable users to access and use t
 - [Gitpod](https://gitpod.io/) - Used as a cloud-based IDE.
 - [GitHub](https://github.com/) - Used for storing code securely online.
 - [Balsamiq](https://balsamiq.com/) - Used to create wireframes and schema diagram.
-
 
 ## Testing
 

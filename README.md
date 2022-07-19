@@ -158,7 +158,13 @@ To fork this project go to the top left of the repository, where you see the For
 
 ### Media
 
+| Media  | Photographer  | Link |
+| :------------ |:---------------:| -----:|
+| Background image | Sean Stratton | [Unsplash](https://unsplash.com/photos/rvVOTp6nyaM) |
+
 ### Resources used
+
+I used the [Code Institute](https://codeinstitute.net/) lessons as an inspiration for this project.
 
 ### Setup and text in README.md
 
@@ -166,4 +172,4 @@ I have used my own README.md file from MS2 as inspiration for this README.md.
 
 ## Acknowledgments
 
-My mentor Tim for his support and advice.
+My mentor Tim for his support, advice and feedback.

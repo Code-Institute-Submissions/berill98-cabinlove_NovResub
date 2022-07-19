@@ -22,7 +22,6 @@ As first-time or casual user (as someone who has not registered):
 
 - As an user I want to understand the main purpose of the website easily.
 - As an user I want to be able to navigate throughout the site.
-- As an user I want to experience good responsive design, so I can access the site on different devices.
 - As an user I want to enjoy nice and clean design and style that is inline with the subject of the site.
 - As an user I want to browse a variety of cabins all around the world.
 - As an user I want to list location specific cabins.
@@ -76,14 +75,27 @@ As admin:
 
 ### Languages
 
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://www.javascript.com/)
+- [Python](https://www.python.org/)
+
 ### Frameworks, Tools and Libraries
 
+- [Materialize](https://materializecss.com/) - Used for responsiveness, styling and elements such as forms, collapasible tables and tabs.
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Micro framework for building applications.
 - [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for overall development and testing for example the  responsiveness and appearance.
 - [Google Fonts](https://fonts.google.com/) - Used to import font to the website.
+- [Font Awesome](https://fontawesome.com/) - Used for icons throughout the site.
 - [W3C](https://www.w3.org/) - Used for validation.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code.
+- [JSHint](https://jshint.com/) - Used to validate JavaScript files.
+- [PEP8 online validator](http://pep8online.com/) - Used to validate Python code.
 - Git - Used for version control.
 - [Gitpod](https://gitpod.io/) - Used as a cloud-based IDE.
 - [GitHub](https://github.com/) - Used for storing code securely online.
+- [Balsamiq](https://balsamiq.com/) - Used to create wireframes and schema diagram.
+
 
 ## Testing
 

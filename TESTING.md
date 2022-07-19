@@ -30,7 +30,26 @@ The site achieved a Lighthouse accessibility score of 100% which confirms that t
 
 ![PEP8 online validation](cabinlove/static/images/accessibility.png)
 
+
 ## Responsiveness Testing
+
+- The site was tested on various devices such as desktop, laptops and mobiles to ensure responsiveness. The website performed as intended. The responsive design was also checked using Chrome Developer Tools across multiple devices.
+
+<details><summary><b>Responsiveness testing</b> (click to expand)</summary>
+
+Desktop view
+
+![Desktop size](cabinlove/static/images/large_chrome.png)
+
+Tablet view
+
+![Tablet size](cabinlove/static/images/medium_edge.png)
+
+Mobile view
+
+![Mobile size](cabinlove/static/images/small_mozilla.png)
+
+</details>
 
 ## Browser Testing
 

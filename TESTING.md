@@ -53,7 +53,24 @@ Mobile view
 
 ## Browser Testing
 
-## Form Testing
+- The site was tested on different browsers (Google Chrome, Firefox, Microsoft Edge) without issues.
+
+<details><summary><b>Browser testing</b> (click to expand)</summary>
+
+Google Chrome
+
+![Google Chrome](cabinlove/static/images/large_chrome.png)
+
+Microsoft Edge
+
+![Microsoft Edge](cabinlove/static/images/medium_edge.png)
+
+Mozzilla Firefox
+
+![Mozzilla Firefox](cabinlove/static/images/small_mozilla.png)
+
+</details>
+
 
 ## Unfixed Bugs
 

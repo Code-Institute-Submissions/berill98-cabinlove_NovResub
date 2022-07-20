@@ -125,3 +125,76 @@ Throughout development manual testing was carried out, in addition to futher tes
 There are no unfixed bugs that I am aware of.
 
 ## User story testing
+
+As first-time or casual user (as someone who has not registered):
+
+- As an user I want to understand the main purpose of the website easily.
+
+![Welcome message](cabinlove/static/images/testing_images/purpose.png)
+
+- As an user I want to be able to navigate throughout the site.
+
+![Navbar](cabinlove/static/images/readme_images/navbar_notloggedin.png)
+
+- As an user I want to enjoy nice and clean design and style that is inline with the subject of the site.
+
+![Design](cabinlove/static/images/readme_images/home.png)
+
+- As an user I want to browse a variety of cabins all around the world.
+- As an user I want to be able to view cabins without having to create an account.
+
+![Browse cabins](cabinlove/static/images/testing_images/allcabins.png)
+
+- As an user I want to list location specific cabins.
+
+![I want to go there button](cabinlove/static/images/readme_images/want_to_go.png)
+
+- As an user I want the option to register for an account, if I want to return later.
+
+![New account](cabinlove/static/images/readme_images/register.png)
+
+As a returning or registered user:
+
+- As an user I want to log into my account.
+
+![Login](cabinlove/static/images/readme_images/login.png)
+
+- As an user I want to log out from my account.
+
+![Logout](cabinlove/static/images/testing_images/logout.png)
+
+- As an user I want to create my own cabins.
+
+![New cabin](cabinlove/static/images/readme_images/newcabin.png)
+
+- As an user I want to edit the cabins I have added.
+- As an user I want to delete the cabins I have added.
+
+![Edit and delete cabin](cabinlove/static/images/readme_images/edit_delete.png)
+![Edit cabin](cabinlove/static/images/readme_images/editcabin.png)
+
+- As an user I want to contact and follow the website via social media.
+
+![Social media](cabinlove/static/images/testing_images/socialmedia.png)
+
+As admin:
+
+- As admin I want to edit my own cabins.
+
+![Edit cabin](cabinlove/static/images/testing_images/editcabin.png)
+
+- As admin I want to add new cabins.
+
+![New cabin](cabinlove/static/images/readme_images/newcabin.png)
+
+- As admin I want to add new locations.
+
+![New location](cabinlove/static/images/readme_images/newlocation.png)
+
+- As admin I want to edit existing locations.
+
+![Edit location](cabinlove/static/images/readme_images/editlocation.png)
+
+- As admin I want to delete existing locations.
+
+![Delete location](cabinlove/static/images/testing_images/locations_delete.png)

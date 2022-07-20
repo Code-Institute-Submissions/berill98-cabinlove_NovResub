@@ -21,9 +21,11 @@
                 <span class="card-title">{{ location.location_name }}</span>
             </div>
             {% if session.user|lower == "admin"|lower %}
+            <!-- edit location -->
             <div class="card-action">
                 <a href="{{ url_for('edit_location', location_id=location.id) }}" class="btn green darken-4">Edit</a>
             </div>
+            <!-- delete location -->
             <div class="card-action">
                 <a href="#modal-{{ location.id }}" class="btn green darken-4 modal-trigger">Delete</a>
                 <!-- delete modal confirmation -->
@@ -31,17 +33,20 @@
                     <div class="modal-content">
                         <h4>Delete Location</h4>
                         <p>Are you sure you want to delete {{ location.location_name }}?</p>
-                        <small>Please note, this action cannot be reversed, and will also delete any cabin associated with it!</small>
+                        <small>Please note, this action cannot be reversed, and will also delete any cabin associated
+                            with it!</small>
                     </div>
                     <div class="modal-footer">
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
-                        <a href="{{ url_for('delete_location', location_id=location.id) }}" class="modal-close waves-effect waves-red btn-flat">Delete</a>
+                        <a href="{{ url_for('delete_location', location_id=location.id) }}"
+                            class="modal-close waves-effect waves-red btn-flat">Delete</a>
                     </div>
                 </div>
             </div>
             {% endif %}
             <div class="card-action">
-                <a href="{{ url_for('cabins_at_locations', location_id=location.id) }}" class="btn green darken-4">I want to go there!</a>
+                <a href="{{ url_for('cabins_at_locations', location_id=location.id) }}" class="btn green darken-4">I
+                    want to go there!</a>
             </div>
         </div>
     </div>

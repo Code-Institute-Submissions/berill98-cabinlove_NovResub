@@ -12,11 +12,13 @@
     </div>
 </div>
 {% else %}
+<!-- welcome message -->
 <div class="row card center-align" id="welcome">
     <h3 class="main-text">Hi, welcome to Cabinlove!</h3>
     <p>
         These cabins are like no other. Relax and reconnect with nature in your very own cabin. Whether you
-        are looking for a wild family adventure with your dog in the great outdoors, an unforgettable group getaway, or a
+        are looking for a wild family adventure with your dog in the great outdoors, an unforgettable group getaway, or
+        a
         romantic retreat for two - we have a perfect cabin for you!<br>
         In order to list your cabin as a host on Cabinlove, you need to sign in. If you already have an account, you can
         use it to sign in.
@@ -38,6 +40,7 @@
 </div>
 {% endif %}
 
+<!-- cabins -->
 <div class="row">
     {% for cabin in cabins %}
     <div class="col s12 m6 l4">
@@ -58,9 +61,11 @@
                 <span class="card-title">Price Per Night: {{ cabin.price_per_night }}</span>
             </div>
             {% if session.user|lower == cabin.owner|lower %}
+            <!-- edit cabin -->
             <div class="card-action">
                 <a href="{{ url_for('edit_cabin', cabin_id=cabin.cabin_id) }}" class="btn green accent-4">Edit</a>
             </div>
+            <!-- delete cabin -->
             <div class="card-action">
                 <a href="#modal-{{ cabin.cabin_id }}" class="btn green accent-4 modal-trigger">Delete</a>
                 <!-- delete modal confirmation -->

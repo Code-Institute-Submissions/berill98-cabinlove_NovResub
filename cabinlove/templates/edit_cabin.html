@@ -9,8 +9,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-house prefix brown-text darken-2"></i>
-                <input id="cabin_name" name="cabin_name" minlength="3" maxlength="60" type="text"
-                    class="validate" value="{{ cabin.cabin_name }}" required>
+                <input id="cabin_name" name="cabin_name" minlength="3" maxlength="60" type="text" class="validate"
+                    value="{{ cabin.cabin_name }}" required>
                 <label for="cabin_name">Cabin Name</label>
             </div>
         </div>
@@ -18,8 +18,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-camera-retro prefix brown-text darken-2"></i>
-                <input id="photo" name="photo" minlength="3" maxlength="80" type="url"
-                    class="validate" value="{{ cabin.photo }}" required>
+                <input id="photo" name="photo" minlength="3" maxlength="80" type="url" class="validate"
+                    value="{{ cabin.photo }}" required>
                 <label for="photo">Photo URL</label>
             </div>
         </div>
@@ -41,9 +41,9 @@
                     <i class="fa-solid fa-paw prefix brown-text darken-2"></i>
                     <label for="pet_friendly">
                         {% if cabin.pet_friendly == True %}
-                            <input id="pet_friendly" name="pet_friendly" type="checkbox" checked>
+                        <input id="pet_friendly" name="pet_friendly" type="checkbox" checked>
                         {% else %}
-                            <input id="pet_friendly" name="pet_friendly" type="checkbox">
+                        <input id="pet_friendly" name="pet_friendly" type="checkbox">
                         {% endif %}
                         <span class="lever"></span>
                         Pet friendly?
@@ -59,9 +59,9 @@
                     <i class="fa-solid fa-house-signal prefix brown-text darken-2"></i>
                     <label for="wifi_included">
                         {% if cabin.wifi_included == True %}
-                            <input id="wifi_included" name="wifi_included" type="checkbox" checked>
+                        <input id="wifi_included" name="wifi_included" type="checkbox" checked>
                         {% else %}
-                            <input id="wifi_included" name="wifi_included" type="checkbox">
+                        <input id="wifi_included" name="wifi_included" type="checkbox">
                         {% endif %}
                         <span class="lever"></span>
                         Is Wi-Fi included?
@@ -77,9 +77,9 @@
                     <i class="fa-solid fa-child-reaching prefix brown-text darken-2"></i>
                     <label for="kids_allowed">
                         {% if cabin.kids_allowed == True %}
-                            <input id="kids_allowed" name="kids_allowed" type="checkbox" checked>
+                        <input id="kids_allowed" name="kids_allowed" type="checkbox" checked>
                         {% else %}
-                            <input id="kids_allowed" name="kids_allowed" type="checkbox">
+                        <input id="kids_allowed" name="kids_allowed" type="checkbox">
                         {% endif %}
                         <span class="lever"></span>
                         Are kids allowed?
@@ -92,8 +92,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-people-group prefix brown-text darken-2"></i>
-                <input id="max_adults" name="max_adults" minlength="1" maxlength="2" type="text"
-                    class="validate" value="{{ cabin.max_adults }}" required>
+                <input id="max_adults" name="max_adults" minlength="1" maxlength="2" type="text" class="validate"
+                    value="{{ cabin.max_adults }}" required>
                 <label for="max_adults">Maximum adults</label>
             </div>
         </div>
@@ -115,11 +115,11 @@
                 <select id="location_id" name="location_id" class="validate" required>
                     <option value="" disabled>Choose Location</option>
                     {% for location in locations %}
-                        {% if location.id == cabin.location_id %}
-                            <option value="{{ location.id }}" selected>{{ location.location_name }}</option>
-                        {% else %}
-                            <option value="{{ location.id }}">{{ location.location_name }}</option>
-                        {% endif %}
+                    {% if location.id == cabin.location_id %}
+                    <option value="{{ location.id }}" selected>{{ location.location_name }}</option>
+                    {% else %}
+                    <option value="{{ location.id }}">{{ location.location_name }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
                 <label for="location_id">Location</label>

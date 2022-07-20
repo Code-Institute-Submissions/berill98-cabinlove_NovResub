@@ -9,7 +9,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-house prefix brown-text darken-2"></i>
-                <input id="cabin_name" name="cabin_name" minlength="3" maxlength="60" type="text" class="validate" required>
+                <input id="cabin_name" name="cabin_name" minlength="3" maxlength="60" type="text" class="validate"
+                    required>
                 <label for="cabin_name">Cabin Name</label>
             </div>
         </div>
@@ -17,7 +18,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-camera-retro prefix brown-text darken-2"></i>
-                <input id="photo_url" name="photo_url" minlength="3" maxlength="80" type="url" class="validate" required>
+                <input id="photo_url" name="photo_url" minlength="3" maxlength="80" type="url" class="validate"
+                    required>
                 <label for="photo_url">Photo URL</label>
             </div>
         </div>
@@ -25,7 +27,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-align-justify prefix brown-text darken-2"></i>
-                <textarea id="cabin_description" name="cabin_description" minlength="5" maxlength="200" class="materialize-textarea validate" required></textarea>
+                <textarea id="cabin_description" name="cabin_description" minlength="5" maxlength="200"
+                    class="materialize-textarea validate" required></textarea>
                 <label for="cabin_description">Cabin Description</label>
             </div>
         </div>
@@ -72,7 +75,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-people-group prefix brown-text darken-2"></i>
-                <input id="max_adults" name="max_adults" minlength="1" maxlength="2" type="text" class="validate" required>
+                <input id="max_adults" name="max_adults" minlength="1" maxlength="2" type="text" class="validate"
+                    required>
                 <label for="max_adults">Maximum adults</label>
             </div>
         </div>
@@ -80,7 +84,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-money-bill-1-wave prefix brown-text darken-2"></i>
-                <input id="price_per_night" name="price_per_night" minlength="1" maxlength="7" type="text" class="validate" required>
+                <input id="price_per_night" name="price_per_night" minlength="1" maxlength="7" type="text"
+                    class="validate" required>
                 <label for="price_per_night">Price per night in $</label>
             </div>
         </div>
@@ -91,7 +96,7 @@
                 <select id="location_id" name="location_id" class="validate" required>
                     <option value="" disabled selected>Choose Location</option>
                     {% for location in locations %}
-                        <option value="{{ location.id }}">{{ location.location_name }}</option>
+                    <option value="{{ location.id }}">{{ location.location_name }}</option>
                     {% endfor %}
                 </select>
                 <label for="location_id">Location</label>

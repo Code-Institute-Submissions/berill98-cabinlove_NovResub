@@ -2,7 +2,7 @@
 
 Welcome to the Cabinlove website!
 
-![Am I responsive?](cabinlove/static/images/responsive.png)
+![Am I responsive?](cabinlove/static/images/readme_images/responsive.png)
 
 Cabinlove is a website that aims to provide information about a variety of cabins from all over the world, where could explore, create and share cabins in one place.
 
@@ -66,11 +66,11 @@ As admin:
 Hand-drawn wireframes.
 <details><summary><b>Wireframes</b> (click to expand)</summary>
 
-- [Home Page](cabinlove/static/images/wf_home.jpg)
-- [Login Page](cabinlove/static/images/wf_login.jpg)
-- [Registration Page](cabinlove/static/images/wf_resgister.jpg)
-- [Locations page](cabinlove/static/images/wf_locations.jpg)
-- [Profile page](cabinlove/static/images/wf_profile.jpg)
+- [Home Page](cabinlove/static/images/wireframes/wf_home.jpg)
+- [Login Page](cabinlove/static/images/wireframes/wf_login.jpg)
+- [Registration Page](cabinlove/static/images/wireframes/wf_resgister.jpg)
+- [Locations page](cabinlove/static/images/wireframes/wf_locations.jpg)
+- [Profile page](cabinlove/static/images/wireframes/wf_profile.jpg)
 
 </details>
 
@@ -80,30 +80,30 @@ Hand-drawn wireframes.
 
 1. Design
     - A clean and simple design and layout with consistency throughout.
-    ![Design](cabinlove/static/images/home.png)
+    ![Design](cabinlove/static/images/readme_images/home.png)
     - Easy navigation by using the navigation bar. Nav links are clearly idenfied both on desktop and when sidenav is expanded on smaller the devices.
     - Responsive design allowing users to use site across all devices.
-    ![Am I responsive?](cabinlove/static/images/responsive.png)
+    ![Am I responsive?](cabinlove/static/images/readme_images/responsive.png)
 2. Cabins
     - Cabins can be created, read, updated and deleted (CRUD) by the registered users.
-    ![New cabin](cabinlove/static/images/newcabin.png)
-    ![Edit and Delete function](cabinlove/static/images/edit_delete.png)
+    ![New cabin](cabinlove/static/images/readme_images/newcabin.png)
+    ![Edit and Delete function](cabinlove/static/images/readme_images/edit_delete.png)
     - Users of the site, either logged in or not, can list cabins by locations.
-    ![I want to go there](cabinlove/static/images/want_to_go.png)
+    ![I want to go there](cabinlove/static/images/readme_images/want_to_go.png)
     - Logged in users have access to their profile, where they can view their own cabins.
-    ![Profile](cabinlove/static/images/profile.png)
+    ![Profile](cabinlove/static/images/readme_images/profile.png)
     - Flash messages will appear when users create, edit, delete the cabins.
-    ![Flash](cabinlove/static/images/flash.png)
+    ![Flash](cabinlove/static/images/readme_images/flash.png)
 3. Register, Login and Logout
     - Users of the site can create an account.
-    ![Register](cabinlove/static/images/register.png)
+    ![Register](cabinlove/static/images/readme_images/register.png)
     - Users can login into their existing account.
-    ![Login](cabinlove/static/images/login.png)
+    ![Login](cabinlove/static/images/readme_images/login.png)
     - Users can logout of their account.
 4. Locations
     - Admin can create, edit and delete locations.
-    ![New location](cabinlove/static/images/newlocation.png)
-    ![Edit and Delete location](cabinlove/static/images/editlocation.png)
+    ![New location](cabinlove/static/images/readme_images/newlocation.png)
+    ![Edit and Delete location](cabinlove/static/images/readme_images/editlocation.png)
 
 ### Defensive Programming
 
@@ -129,11 +129,11 @@ The structure of the site has been developed to enable users to access and use t
 - Navbar - is accessible to all users. The navbar changes to a sidenav on tablet screens and smaller for responsiveness. The options available in the navbar change depending on whether a user is logged in or not.
 
     * For not logged in users:  
-![Navbar for logged in users](cabinlove/static/images/navbar_notloggedin.png)
+![Navbar for logged in users](cabinlove/static/images/readme_images/navbar_notloggedin.png)
     * For logged in users:  
-![Navbar for not logged in users](cabinlove/static/images/navbar_loggedin.png)
+![Navbar for not logged in users](cabinlove/static/images/readme_images/navbar_loggedin.png)
     * For admin:  
-![Navbar for admin](cabinlove/static/images/navbar_admin.png)
+![Navbar for admin](cabinlove/static/images/readme_images/navbar_admin.png)
 
 - List of cabins is accessible to all users, whether logged in or not.
 - Add new cabin is accessible only to registered users.
@@ -142,7 +142,7 @@ The structure of the site has been developed to enable users to access and use t
 
 - Database schema design was created using [Balsamiq](https://balsamiq.com/), please see below.
 
-![Database Schema Diagram](cabinlove/static/images/database_schema.png)
+![Database Schema Diagram](cabinlove/static/images/readme_images/database_schema.png)
 
 ## Technologies used
 

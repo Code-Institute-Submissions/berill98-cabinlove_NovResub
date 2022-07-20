@@ -1,14 +1,24 @@
 # Testing 
 
-## Validator Testing 
+## Validator Testing
 
 ### HTML Validation
 All HTML pages were tested using [W3C Markup Validation](https://validator.w3.org/). 
-- One warning was displayed on all pages. This refers to the section element that holds the flash messages. Please see below the examples for the HTML validation.
+- One warning was displayed on all pages. This refers to the section element that holds the flash messages.
 
-![First example of HTML Validation](cabinlove/static/images/cabinshtml.png)
-![Second example of HTML Validation2](cabinlove/static/images/locationshtml.png)
-![Third example of HTML Validation](cabinlove/static/images/registerhtml.png)
+<details><summary><b>HTML validation images below</b> (click to expand)</summary>
+
+![HTML Validation of Home](cabinlove/static/images/testing_images/cabinshtml.png)
+![HTML Validation of Locations](cabinlove/static/images/testing_images/locationshtml.png)
+![HTML Validation of Registration](cabinlove/static/images/testing_images/registerhtml.png)
+![HTML Validation of Login](cabinlove/static/images/testing_images/loginhtml.png)
+![HTML Validation of I want to go there](cabinlove/static/images/testing_images/wanttogohtml.png)
+![HTML Validation of Add cabin](cabinlove/static/images/testing_images/addcabinhtml.png)
+![HTML Validation of Edit cabin](cabinlove/static/images/testing_images/editcabinhtml.png)
+![HTML Validation of Add location](cabinlove/static/images/testing_images/addlocationhtml.png)
+![HTML Validation of Add location](cabinlove/static/images/testing_images/editlocation.png)
+
+</details>
 
 ### CSS Validation
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the style.css file. No changes were required.

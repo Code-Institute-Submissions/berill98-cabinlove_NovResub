@@ -49,15 +49,15 @@ The site achieved a Lighthouse accessibility score of 100% which confirms that t
 
 Desktop view
 
-![Desktop size](cabinlove/static/images/large_chrome.png)
+![Desktop size](cabinlove/static/images/testing_images/large_chrome.png)
 
 Tablet view
 
-![Tablet size](cabinlove/static/images/medium_edge.png)
+![Tablet size](cabinlove/static/images/testing_images/medium_edge.png)
 
 Mobile view
 
-![Mobile size](cabinlove/static/images/small_mozilla.png)
+![Mobile size](cabinlove/static/images/testing_images/small_mozilla.png)
 
 </details>
 
@@ -69,15 +69,15 @@ Mobile view
 
 Google Chrome
 
-![Google Chrome](cabinlove/static/images/large_chrome.png)
+![Google Chrome](cabinlove/static/images/testing_images/large_chrome.png)
 
 Microsoft Edge
 
-![Microsoft Edge](cabinlove/static/images/medium_edge.png)
+![Microsoft Edge](cabinlove/static/images/testing_images/medium_edge.png)
 
 Mozzilla Firefox
 
-![Mozzilla Firefox](cabinlove/static/images/small_mozilla.png)
+![Mozilla Firefox](cabinlove/static/images/testing_images/small_mozilla.png)
 
 </details>
 

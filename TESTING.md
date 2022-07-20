@@ -23,22 +23,22 @@ All HTML pages were tested using [W3C Markup Validation](https://validator.w3.or
 ### CSS Validation
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the style.css file. No changes were required.
 
-![CSS validator](cabinlove/static/images/css.png)
+![CSS validator](cabinlove/static/images/testing_images/css.png)
 
 ### JavaScript Validation
 [JSHint Validator](https://jshint.com/) was used to validate all JavaScript files. 
 
-![Javascript validator](cabinlove/static/images/javascript.png)
+![Javascript validator](cabinlove/static/images/testing_images/javascript.png)
 
 ### Python Validation
 [PEP8 Online](http://pep8online.com/) validator was used to test the run.py file.
 
-![PEP8 online validation](cabinlove/static/images/python.png)
+![PEP8 online validation](cabinlove/static/images/testing_images/python.png)
 
 ### Accessibility
 The site achieved a Lighthouse accessibility score of 100% which confirms that the website is accessible.
 
-![PEP8 online validation](cabinlove/static/images/accessibility.png)
+![PEP8 online validation](cabinlove/static/images/testing_images/accessibility.png)
 
 
 ## Responsiveness Testing

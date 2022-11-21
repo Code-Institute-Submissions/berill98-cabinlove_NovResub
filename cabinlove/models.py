@@ -17,7 +17,7 @@ class Cabin(db.Model):
     # schema for the Cabin model
     id = db.Column(db.Integer, primary_key=True)
     cabin_name = db.Column(db.String(60), unique=True, nullable=False)
-    photo = db.Column(db.String(200), unique=True, nullable=False)
+    photo = db.Column(db.String(200), nullable=False)
     cabin_description = db.Column(db.Text, nullable=False)
     pet_friendly = db.Column(db.Boolean, default=False, nullable=False)
     wifi_included = db.Column(db.Boolean, default=True, nullable=False)
